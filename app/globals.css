@@ -93,3 +93,6 @@ footer{background:#e9ebe4;padding:53px 0 22px}.footer-top{display:grid;grid-temp
 @media(max-width:760px){.hero-bottom{grid-template-columns:1fr}.about{gap:30px;padding-block:52px 60px}.about-image{height:clamp(360px,100vw,480px);min-height:0}.about-copy h2{font-size:clamp(40px,10vw,56px)}.field-label .optional{font-size:12px}}
 @media(max-width:760px){.pause{padding:0;min-height:0;display:flex;flex-direction:column;align-items:stretch}.cta-photo{position:relative;inset:auto;z-index:auto;order:2;height:230px}.cta-photo img{object-position:right center}.pause::after{display:none}.cta-copy{padding:32px 26px;max-width:none}.cta-copy h2{font-size:clamp(36px,9vw,48px)}.cta-copy p{margin:18px 0 24px;font-size:16px}.cta-button{font-size:15px}}
 @media(prefers-reduced-motion:reduce){:root{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+.contact-form input:not([type=checkbox]):hover,.contact-form textarea:hover,.contact-form select:hover{border-color:#aab5a2}
+.contact-form input:not([type=checkbox]):focus-visible,.contact-form textarea:focus-visible,.contact-form select:focus-visible{outline:2px solid var(--sage);outline-offset:-3px}
+@media(max-width:760px){.contact-form .form-row{grid-template-columns:1fr;gap:16px}}
