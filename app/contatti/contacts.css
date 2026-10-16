@@ -1,0 +1,38 @@
+.contacts-main{width:100%;max-width:100%;overflow-x:clip}
+.contacts-hero{display:grid;grid-template-columns:1.45fr .85fr;gap:56px;padding-block:44px 90px;align-items:end}
+.contacts-hero .eyebrow{margin-bottom:18px}
+.contacts-hero-photo{position:relative;height:340px;margin:0 0 7px;border-radius:24px;overflow:hidden;background:var(--sage-light)}
+.contacts-hero-photo img{object-fit:cover;object-position:center}
+.contacts-breadcrumb{display:flex;gap:12px;color:var(--muted);font-size:13px;margin-bottom:32px}
+.contacts-breadcrumb>span:first-of-type{color:var(--muted)}
+.contacts-hero h1{max-width:780px;font-size:clamp(45px,5.05vw,70px);letter-spacing:-2.5px;line-height:1.12}
+.contacts-hero-copy>p:not(.eyebrow){max-width:640px;font-size:18px;line-height:1.85;color:var(--body-copy);margin:26px 0 22px}
+.contacts-practical-band{background:var(--warm);padding-block:64px 72px}
+.contacts-practical{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(50px,8vw,110px);align-items:start}
+.contacts-references h2{font-size:clamp(32px,3.3vw,44px);letter-spacing:-1.5px;line-height:1.2}
+.contacts-reference-list{margin:32px 0 0}
+.contacts-reference-list>div{display:grid;grid-template-columns:140px 1fr;gap:20px;padding:22px 0;border-top:1px solid var(--line)}
+.contacts-reference-list dt{font-size:14px;font-weight:600;line-height:1.7;color:var(--sage)}
+.contacts-reference-list dd{margin:0;font-size:16px;line-height:1.8;color:var(--sage-dark)}
+.contacts-reference-list small{display:block;font-size:14px;color:var(--body-copy);margin-top:5px}
+.contacts-reference-list .text-link{display:flex;width:fit-content;margin-top:7px;font-size:13px}
+.contacts-email{overflow-wrap:anywhere;text-decoration:underline;text-decoration-color:var(--line-strong);text-underline-offset:4px}
+.contacts-email:hover{color:var(--sage)}
+.contacts-request{scroll-margin-top:20px}
+.contacts-request h2{font-size:clamp(31px,3vw,40px);letter-spacing:-1.3px}
+.contacts-request>p:not(.eyebrow){font-size:16px;line-height:1.8;color:var(--body-copy);margin:20px 0 24px}
+.contacts-request .contact-form{padding:28px;gap:19px;background:var(--white);border-color:var(--line)}
+.contacts-request .contact-form label{font-size:15px}
+.contacts-request .contact-form .form-row:nth-child(2){grid-template-columns:1fr 1fr}
+.contacts-request .form-hint{color:var(--body-copy);font-size:13px}
+.contacts-request .contact-form .field-error{color:#9a463d}
+@media(max-width:1000px){.contacts-hero{grid-template-columns:1.3fr .7fr;gap:30px}.contacts-hero h1{font-size:clamp(41px,5.4vw,54px)}.contacts-hero-photo{height:310px}.contacts-practical{gap:35px;grid-template-columns:.9fr 1.1fr}.contacts-reference-list>div{grid-template-columns:1fr;gap:6px;padding-block:18px}.contacts-request .contact-form{padding:22px}}
+@media(max-width:760px){.contacts-hero{grid-template-columns:1fr;gap:32px;padding-block:26px 58px}.contacts-breadcrumb{margin-bottom:28px;font-size:12px}.contacts-hero h1{font-size:clamp(36px,9.5vw,58px);letter-spacing:-1.7px}.contacts-hero-copy>p:not(.eyebrow){font-size:17px;margin-top:22px}.contacts-hero-photo{height:250px;margin:0}.contacts-practical-band{padding-block:44px 54px}.contacts-practical{grid-template-columns:1fr;gap:42px}.contacts-references h2{font-size:clamp(32px,8.7vw,44px)}.contacts-reference-list{margin-top:25px}.contacts-reference-list>div{grid-template-columns:115px minmax(0,1fr);gap:18px;padding-block:19px}.contacts-reference-list dt{font-size:13px}.contacts-reference-list dd{font-size:15px}.contacts-request{scroll-margin-top:18px}.contacts-request h2{font-size:32px}.contacts-request .contact-form{padding:22px 19px}.contacts-request .contact-form .form-row,.contacts-request .contact-form .form-row:nth-child(2){grid-template-columns:1fr}}
+@media(max-width:380px){.contacts-reference-list>div{grid-template-columns:1fr;gap:6px}}
+
+.contacts-closing{background:var(--paper);padding-block:100px 108px;text-align:center}
+.contacts-closing h2{max-width:1000px;margin-inline:auto;font-size:clamp(48px,5.4vw,72px);line-height:1.13;letter-spacing:-2.4px;text-wrap:balance}
+.contacts-closing h2>span,.contacts-closing h2>em{display:block}
+.contacts-closing h2>em{margin-top:3px}
+.contacts-closing p{max-width:540px;margin:28px auto 0;color:var(--muted);font-size:19px;line-height:1.8;text-wrap:balance}
+@media(max-width:760px){.contacts-closing{padding-block:68px 76px}.contacts-closing h2{max-width:600px;font-size:clamp(32px,9.3vw,52px);letter-spacing:-1.3px;line-height:1.17}.contacts-closing p{max-width:390px;font-size:17px;margin-top:24px;line-height:1.8}}
