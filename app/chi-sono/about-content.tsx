@@ -44,12 +44,13 @@ export function AboutContent() {
         <div className="bio-clinical-heading"><p className="eyebrow">IL MIO APPROCCIO</p><h2 id="clinical-title">Pensieri, emozioni<br /><em>e comportamenti.</em></h2></div>
         <div className="bio-clinical-text">
           <p>Nell'approccio cognitivo-comportamentale, pensieri, emozioni e comportamenti sono strettamente collegati. Il modo in cui interpretiamo le esperienze influenza le emozioni che proviamo e le nostre reazioni.</p>
-          <p>Alcuni pensieri emergono automaticamente e possono contribuire alla sofferenza. Il percorso terapeutico aiuta a riconoscerli, comprenderne il significato ed esplorare prospettive alternative.</p>
+          <p>Alcuni pensieri automatici possono contribuire alla sofferenza. Per comprenderli e favorire il cambiamento, il percorso terapeutico integra interventi cognitivi e comportamentali.</p>
         </div>
       </div>
       <div className="bio-clinical-practice">
-        <article aria-labelledby="cognitive-title"><h3 id="cognitive-title">Interventi cognitivi</h3><p>Esploriamo i pensieri che contribuiscono alla sofferenza, il loro significato personale e le possibili interpretazioni alternative.</p></article>
-        <article aria-labelledby="behavioural-title"><h3 id="behavioural-title">Interventi comportamentali</h3><p>Individuiamo strategie concrete per modificare comportamenti poco funzionali e sperimentare nuovi modi di affrontare le difficoltà.</p></article>
+        <div className="bio-practice-divider" aria-hidden="true" />
+        <article aria-labelledby="cognitive-title"><h3 id="cognitive-title">Interventi cognitivi</h3><p>Attraverso il lavoro cognitivo esploriamo i pensieri che alimentano la sofferenza, il loro significato e le possibili interpretazioni alternative.</p></article>
+        <article aria-labelledby="behavioural-title"><h3 id="behavioural-title">Interventi comportamentali</h3><p>Con il lavoro comportamentale sviluppiamo strategie concrete per modificare comportamenti poco funzionali e affrontare le difficoltà quotidiane.</p></article>
       </div>
       <figure className="bio-studio"><Image src="/images/ambiente-consulenza.webp" alt="Immagine d’atmosfera: due poltrone, una libreria e luce naturale in uno spazio di ascolto" fill sizes="(max-width: 760px) 100vw, 92vw" /><figcaption>Uno spazio per fermarsi. E ripartire.</figcaption></figure>
     </section>
