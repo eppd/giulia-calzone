@@ -1,5 +1,4 @@
-/* Logo accents scoped to Chi sono; the peach is darkened for text contrast. */
-.bio-main{--bio-rose:#926251;--bio-terracotta:#99653e;overflow-x:clip;width:100%;max-width:100%}
+.bio-main{overflow-x:clip;width:100%;max-width:100%}
 .bio-hero{display:grid;grid-template-columns:1.45fr .85fr;gap:56px;padding-block:44px 90px;align-items:end}
 .bio-back{display:flex;gap:12px;color:var(--muted);font-size:13px;margin-bottom:32px}
 .bio-back>span:first-of-type{color:var(--muted)}
@@ -12,7 +11,7 @@
 .bio-vision{background:var(--warm);padding-block:68px 72px}
 .bio-vision .eyebrow{margin-bottom:22px}
 .bio-vision-heading h2{display:flex;align-items:baseline;justify-content:space-between;gap:22px;font-size:clamp(66px,9.84vw,136px);letter-spacing:-7px;line-height:1.08}
-.bio-vision-and{font-size:.45em;font-style:italic;color:var(--bio-rose);align-self:center}
+.bio-vision-and{font-size:.45em;font-style:italic;color:var(--sage);align-self:center}
 .bio-vision-bottom{display:grid;grid-template-columns:1fr 1.05fr;gap:80px;margin-top:36px;padding-top:28px;border-top:1px solid var(--line)}
 .bio-vision-note{font-family:var(--serif);font-size:24px;line-height:1.45;color:var(--sage)}
 .bio-vision-bottom>p{margin:0;max-width:580px;color:var(--body-copy);font-size:18px;line-height:1.9}
@@ -20,7 +19,6 @@
 .bio-clinical h2,.bio-personal h2{font-size:clamp(40px,4.2vw,58px)}
 .bio-clinical-intro{display:block}
 .bio-clinical-heading{margin-bottom:28px}
-.bio-clinical-heading>.eyebrow{color:var(--bio-terracotta)}
 .bio-clinical-text{display:grid;grid-template-columns:1fr 1fr;gap:64px}
 .bio-clinical-text p{font-size:var(--type-copy);line-height:var(--leading-copy);color:var(--body-copy);margin:0}
 .bio-studio{position:relative;overflow:hidden;border-radius:24px;height:400px;margin:36px 0 0;background:var(--sage-light)}
@@ -39,7 +37,7 @@
 .bio-pillar{padding-top:25px}
 .bio-pillar-heading{display:flex;align-items:baseline;gap:12px}
 .bio-pillar-number,.bio-pillar h3{font-family:var(--serif);font-weight:500;font-size:27px;line-height:1.3;letter-spacing:-.6px}
-.bio-pillar-number{flex:0 0 auto;color:var(--bio-terracotta)}
+.bio-pillar-number{flex:0 0 auto;color:var(--sage)}
 .bio-pillar h3{max-width:300px;margin:0}
 .bio-pillar p{font-size:16px;line-height:1.85;color:var(--body-copy);margin:15px 0 0}
 .bio-personal{background:var(--sage-light);padding-block:76px}
