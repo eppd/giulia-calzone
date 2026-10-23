@@ -15,13 +15,20 @@
 .bio-vision-bottom{display:grid;grid-template-columns:1fr 1.05fr;gap:80px;margin-top:36px;padding-top:28px;border-top:1px solid var(--line)}
 .bio-vision-note{font-family:var(--serif);font-size:24px;line-height:1.45;color:var(--sage)}
 .bio-vision-bottom>p{margin:0;max-width:580px;color:var(--body-copy);font-size:18px;line-height:1.9}
-.bio-clinical{display:grid;grid-template-columns:1fr 1fr;gap:36px 80px;padding-block:100px 0;align-items:start}
+.bio-clinical{display:block;padding-block:100px 0}
 .bio-clinical h2,.bio-personal h2{font-size:clamp(40px,4.2vw,58px)}
-.bio-clinical-text p{font-size:17px;line-height:1.85;color:var(--body-copy);margin:0 0 18px}
-.bio-clinical-text p:last-child{margin:0}
-.bio-studio{grid-column:1/-1;position:relative;overflow:hidden;border-radius:24px;height:400px;margin:8px 0 0;background:var(--sage-light)}
+.bio-clinical-intro{display:block}
+.bio-clinical-heading{margin-bottom:28px}
+.bio-clinical-text{display:grid;grid-template-columns:1fr 1fr;gap:64px}
+.bio-clinical-text p{font-size:var(--type-copy);line-height:var(--leading-copy);color:var(--body-copy);margin:0}
+.bio-studio{position:relative;overflow:hidden;border-radius:24px;height:400px;margin:32px 0 0;background:var(--sage-light)}
 .bio-studio img{object-fit:cover;object-position:center 57%}
 .bio-studio figcaption{position:absolute;bottom:22px;left:24px;background:var(--paper);padding:9px 14px;font-size:13px;color:var(--sage);border-radius:8px}
+.bio-clinical-practice{display:grid;grid-template-columns:1fr 1fr;gap:64px;margin-top:32px;padding-top:28px;border-top:1px solid var(--line)}
+.bio-clinical-practice h3{font-family:var(--serif);font-weight:500;font-size:27px;line-height:1.3;letter-spacing:-.6px;margin:0 0 15px}
+.bio-clinical-practice p{font-size:var(--type-copy);line-height:var(--leading-copy);color:var(--body-copy);margin:0}
+@media(max-width:1000px){.bio-clinical-text,.bio-clinical-practice{gap:35px}.bio-clinical-practice h3{font-size:24px}}
+@media(max-width:760px){.bio-clinical-text,.bio-clinical-practice{grid-template-columns:1fr;gap:22px}.bio-clinical-heading{margin-bottom:22px}.bio-clinical-practice{margin-top:22px;padding-top:22px;gap:26px}.bio-clinical-practice h3{font-size:26px;margin-bottom:12px}}
 .bio-pillars{padding-block:80px 100px}
 .bio-pillars-heading{display:block;margin-bottom:28px}
 .bio-pillars-heading .eyebrow{margin:0 0 14px;max-width:none}
@@ -34,7 +41,7 @@
 .bio-personal{background:var(--sage-light);padding-block:76px}
 .bio-personal-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
 .bio-personal p{font-size:18px;line-height:1.85;color:var(--body-copy);margin:0 0 24px}
-@media(max-width:1000px){.bio-hero{grid-template-columns:1.3fr .7fr;gap:30px}.bio-hero h1{font-size:clamp(41px,5.4vw,54px)}.bio-portrait{height:310px}.bio-clinical,.bio-personal-grid{gap:35px}.bio-pillars-heading{display:block}.bio-pillars-heading .eyebrow{max-width:none;margin-bottom:16px}.bio-pillars-grid{gap:24px}.bio-pillar h3{font-size:24px}}
-@media(max-width:760px){.bio-hero{grid-template-columns:1fr;gap:32px;padding-block:26px 58px}.bio-back{margin-bottom:28px;font-size:12px}.bio-hero h1{font-size:clamp(36px,9.5vw,58px);letter-spacing:-1.7px}.bio-hero-copy>p:not(.eyebrow){font-size:17px;margin-top:22px}.bio-portrait{height:250px;margin:0}.bio-vision{padding-block:44px 48px}.bio-vision-heading h2{font-size:clamp(43.5px,11.48vw,85px);letter-spacing:-3px;gap:12px}.bio-vision-bottom{grid-template-columns:1fr;gap:22px;margin-top:24px;padding-top:24px}.bio-vision-note{font-size:21px}.bio-vision-note br{display:none}.bio-vision-bottom>p{font-size:17px;line-height:1.8}.bio-clinical{grid-template-columns:1fr;padding-top:60px;gap:26px}.bio-clinical h2,.bio-personal h2{font-size:clamp(36px,9.2vw,54px);letter-spacing:-1.5px}.bio-studio{grid-column:auto;height:330px;margin-top:4px}.bio-studio figcaption{left:16px;bottom:16px;right:16px;font-size:12px;width:fit-content}.bio-pillars{padding-block:54px 60px}.bio-pillars h2{font-size:34px;line-height:1.2}.bio-pillars-grid{grid-template-columns:1fr;gap:0;border:0}.bio-pillar{border-top:1px solid var(--line);padding:22px 0 26px}.bio-pillar h3{max-width:none;margin:13px 0 12px;font-size:26px}.bio-personal{padding-block:52px}.bio-personal-grid{grid-template-columns:1fr;gap:25px}.bio-personal p{font-size:17px}}
+@media(max-width:1000px){.bio-hero{grid-template-columns:1.3fr .7fr;gap:30px}.bio-hero h1{font-size:clamp(41px,5.4vw,54px)}.bio-portrait{height:310px}.bio-personal-grid{gap:35px}.bio-pillars-heading{display:block}.bio-pillars-heading .eyebrow{max-width:none;margin-bottom:16px}.bio-pillars-grid{gap:24px}.bio-pillar h3{font-size:24px}}
+@media(max-width:760px){.bio-hero{grid-template-columns:1fr;gap:32px;padding-block:26px 58px}.bio-back{margin-bottom:28px;font-size:12px}.bio-hero h1{font-size:clamp(36px,9.5vw,58px);letter-spacing:-1.7px}.bio-hero-copy>p:not(.eyebrow){font-size:17px;margin-top:22px}.bio-portrait{height:250px;margin:0}.bio-vision{padding-block:44px 48px}.bio-vision-heading h2{font-size:clamp(43.5px,11.48vw,85px);letter-spacing:-3px;gap:12px}.bio-vision-bottom{grid-template-columns:1fr;gap:22px;margin-top:24px;padding-top:24px}.bio-vision-note{font-size:21px}.bio-vision-note br{display:none}.bio-vision-bottom>p{font-size:17px;line-height:1.8}.bio-clinical{padding-top:60px}.bio-clinical h2,.bio-personal h2{font-size:clamp(36px,9.2vw,54px);letter-spacing:-1.5px}.bio-studio{height:330px;margin-top:24px}.bio-studio figcaption{left:16px;bottom:16px;right:16px;font-size:12px;width:fit-content}.bio-pillars{padding-block:54px 60px}.bio-pillars h2{font-size:34px;line-height:1.2}.bio-pillars-grid{grid-template-columns:1fr;gap:0;border:0}.bio-pillar{border-top:1px solid var(--line);padding:22px 0 26px}.bio-pillar h3{max-width:none;margin:13px 0 12px;font-size:26px}.bio-personal{padding-block:52px}.bio-personal-grid{grid-template-columns:1fr;gap:25px}.bio-personal p{font-size:17px}}
 .about-page .pause{margin-top:80px}
 @media(max-width:760px){.about-page .pause{margin-top:56px}}
