@@ -23,7 +23,7 @@ export function FirstStepCta({ id }: FirstStepCtaProps) {
         <h2 id={titleId}>
           Il primo passo?
           <br />
-          <em>Parlarne insieme.</em>
+          <em>Parlarne insieme</em>
         </h2>
         <p>Non serve avere tutte le risposte. Un primo colloquio è uno spazio per le tue domande, con i tuoi tempi.</p>
         <Link className="button cta-button" href="/contatti/#modulo">

@@ -15,7 +15,7 @@ const questions = [
 export function ContactsFaq() {
   const [open, setOpen] = useState<number | null>(null);
   const reduced = useReducedMotion();
-  return <section className="contacts-faq" aria-labelledby="contacts-faq-title"><div className="section-shell contacts-faq-grid"><div><p className="eyebrow">DOMANDE FREQUENTI</p><h2 id="contacts-faq-title">Prima di iniziare,<br /><em>qualche risposta.</em></h2></div><div className="contacts-faq-list">{questions.map(([question, answer], index) => {
+  return <section className="contacts-faq" aria-labelledby="contacts-faq-title"><div className="section-shell contacts-faq-grid"><div><p className="eyebrow">DOMANDE FREQUENTI</p><h2 id="contacts-faq-title">Prima di iniziare,<br /><em>qualche risposta</em></h2></div><div className="contacts-faq-list">{questions.map(([question, answer], index) => {
     const expanded = open === index;
     return <div className="contacts-faq-item" key={question}><h3><button id={`contacts-question-${index}`} type="button" aria-expanded={expanded} aria-controls={`contacts-answer-${index}`} onClick={() => setOpen(expanded ? null : index)}><span className="contacts-faq-number" aria-hidden="true">0{index + 1}</span><span>{question}</span>{expanded ? <Minus size={18} aria-hidden="true" /> : <Plus size={18} aria-hidden="true" />}</button></h3><motion.div id={`contacts-answer-${index}`} role="region" aria-labelledby={`contacts-question-${index}`} aria-hidden={!expanded} initial={false} animate={{ height: expanded ? "auto" : 0, opacity: expanded ? 1 : 0 }} transition={{ duration: reduced ? 0 : .24, ease: "easeInOut" }} className="contacts-faq-answer"><p>{answer}</p></motion.div></div>;
   })}</div></div></section>;

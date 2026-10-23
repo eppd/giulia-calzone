@@ -4,7 +4,7 @@ import { navigation } from "./navigation";
 import { footerProfessionalDetails } from "./footer-professional-details";
 import "./site-footer.css";
 
-const directions = "https://www.google.com/maps/search/?api=1&query=Via+Salvecchio+6%2FA+Crema+CR";
+const directions = "https://www.google.com/maps/search/?api=1&query=Via+Salvecchio+6%2FA+26013+Crema+CR";
 const footerNavigation = navigation.filter(item => !["home", "come-funziona"].includes(item.id));
 
 export function SiteFooter({ home = false }: { home?: boolean }) {
@@ -44,7 +44,7 @@ export function SiteFooter({ home = false }: { home?: boolean }) {
         <address className="site-footer__contacts">
           <a href="mailto:info@giuliacalzone.it">info@giuliacalzone.it</a>
           <a href="tel:+393482908640">+39 348 290 8640</a>
-          <a href={directions} target="_blank" rel="noopener noreferrer" aria-label="Indicazioni per lo studio: Via Salvecchio 6/A, Crema (CR), apre una nuova scheda">Via Salvecchio 6/A,<br />Crema (CR)</a>
+          <a href={directions} target="_blank" rel="noopener noreferrer" aria-label="Indicazioni per lo studio: Via Salvecchio 6/A, 26013 Crema (CR), apre una nuova scheda">Via Salvecchio 6/A,<br />26013 Crema (CR)</a>
         </address>
       </div>
 

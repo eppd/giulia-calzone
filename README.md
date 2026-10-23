@@ -31,7 +31,7 @@ Foto CTA: `public/images/cta-ambiente.webp`, generata con lo strumento integrato
 
 Header e footer condividono il marchio con l’emblema botanico originale fornito dall’utente. Il PNG in `public/images/emblema-giulia-calzone.png` conserva la trasparenza originale. Il favicon usa lo stesso emblema su fondo avorio in `app/icon.png`.
 
-La route `/chi-sono/` riutilizza header, footer e Reveal condivisi con la homepage. Il footer riporta l’iscrizione all’Ordine degli Psicologi della Lombardia n. 22666, riscontrata negli atti pubblici OPL del 2024. Il campo Partita IVA mostra il segnaposto `XXXXXXX` richiesto dall’utente: sostituirlo con il numero reale prima della pubblicazione.
+La route `/chi-sono/` riutilizza header, footer e Reveal condivisi con la homepage. Il footer riporta l’iscrizione all’Ordine degli Psicologi della Lombardia n. 22666, riscontrata negli atti pubblici OPL del 2024, e la Partita IVA `01747640199` fornita dall’utente.
 
 La hero di `/chi-sono/` usa il ritratto fornito dall’utente in `public/images/giulia-calzone-chi-sono.webp`. Il riquadro mantiene le stesse dimensioni delle hero di Percorsi e Contatti: altezza 340 px, 310 px sotto i 1000 px e 250 px sotto i 760 px. `object-position: 64% 40%` mantiene il volto in evidenza; la foto è convertita in WebP senza filtri. La foto della homepage resta distinta. Le foto degli ambienti riutilizzano gli asset illustrativi esistenti.
 
