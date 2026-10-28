@@ -49,3 +49,43 @@
 @media(max-width:760px){.paths-hero{grid-template-columns:1fr;gap:32px;padding-block:26px 58px}.paths-breadcrumb{margin-bottom:28px;font-size:12px}.paths-hero h1{font-size:clamp(36px,9.5vw,58px);letter-spacing:-1.7px}.paths-hero-copy>p:not(.eyebrow){font-size:17px;margin-top:22px}.paths-hero-photo{height:250px;margin:0}.paths-offered{padding-block:54px 0}.paths-offered-heading{margin-bottom:32px}.paths-offered h2,.paths-process h2{font-size:clamp(36px,9vw,50px);letter-spacing:-1.6px}.paths-offered-heading>p{max-width:none;margin-top:16px}.path-block{grid-template-columns:1fr;gap:28px;padding-block:32px 44px;scroll-margin-top:18px}.path-copy h3{font-size:clamp(32px,8.2vw,43px);letter-spacing:-1px}.path-copy .eyebrow{margin-bottom:16px}.path-copy>p:not(.eyebrow){font-size:17px;line-height:1.85;margin:19px 0}.path-block-coppia .path-copy,.path-block-coppia .path-photo{order:initial}.path-photo,.path-block-coppia .path-photo,.path-block-genitorialita .path-photo{height:270px}.path-photo figcaption{left:15px;right:15px;bottom:15px;font-size:11px}.paths-areas{padding-block:56px 60px}.paths-section-heading{margin-bottom:30px}.paths-areas h2{font-size:clamp(34px,8.8vw,48px);letter-spacing:-1.4px}.paths-areas-grid{grid-template-columns:1fr;gap:0}.paths-areas-column+.paths-areas-column{border-top:0}.path-area{padding-block:26px;grid-template-columns:26px minmax(0,1fr);gap:12px}.path-area h3{font-size:23px}.path-area p{font-size:16px;padding-right:0}.paths-process{padding-block:56px}.paths-process-grid{grid-template-columns:1fr;gap:36px}.paths-process-heading>p:not(.eyebrow){font-size:17px;margin-top:22px}}
 .paths-page .pause{margin-top:80px}
 @media(max-width:760px){.paths-page .pause{margin-top:56px}}
+
+/* A wide, editorial reading of the four therapeutic phases, scoped to /percorsi. */
+.paths-process-grid{display:block}
+.paths-process-heading{display:block;margin-bottom:54px}
+.paths-process-heading>.eyebrow{margin-bottom:18px}
+.paths-process-heading>h2{margin:0}
+.paths-process-heading>p:not(.eyebrow){max-width:none;margin:16px 0 0;font-size:clamp(14px,1.4vw,17px);line-height:1.7;white-space:nowrap}
+.paths-process .paths-timeline{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
+.paths-process .paths-timeline::before{content:"";position:absolute;top:22px;left:12.5%;right:12.5%;height:1px;background:var(--line-strong);opacity:.8}
+.paths-process .path-phase{display:flex;flex-direction:column;gap:0;padding:0 16px}
+.paths-process .path-phase:not(:last-child)::after{display:none}
+.paths-process .path-phase-marker{position:relative;z-index:1;align-self:center;width:44px;height:44px;border:1px solid var(--line-strong);border-radius:50%;background:var(--sage-light);color:var(--sage-dark)}
+.paths-process .path-phase-marker>svg{width:21px;height:21px;stroke-width:1.8}
+.paths-process .path-phase h3{font-size:clamp(22px,2vw,26px);line-height:1.24;margin:19px 0 10px}
+.paths-process .path-phase p{max-width:34ch}
+
+@media(max-width:1000px){
+  .paths-process-heading{margin-bottom:42px}
+  .paths-process-heading>p:not(.eyebrow){white-space:normal}
+  .paths-process .paths-timeline{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:34px}
+  .paths-process .paths-timeline::before{display:none}
+  .paths-process .path-phase{padding-inline:14px}
+  .paths-process .path-phase-marker{align-self:flex-start}
+  .paths-process .path-phase h3{margin-top:15px}
+  .paths-process .path-phase p{max-width:42ch}
+}
+
+@media(max-width:760px){
+  .paths-process-grid{display:block}
+  .paths-process-heading{display:block;margin-bottom:34px}
+  .paths-process-heading>p:not(.eyebrow){margin-top:20px}
+  .paths-process .paths-timeline{grid-template-columns:1fr;gap:0;padding-left:0}
+  .paths-process .paths-timeline::before{display:block;top:22px;bottom:22px;left:21px;right:auto;width:1px;height:auto}
+  .paths-process .path-phase{display:grid;grid-template-columns:44px minmax(0,1fr);column-gap:17px;padding:0 0 28px}
+  .paths-process .path-phase:last-child{padding-bottom:0}
+  .paths-process .path-phase:not(:last-child)::after{display:none}
+  .paths-process .path-phase-marker{align-self:start}
+  .paths-process .path-phase h3{font-size:25px;margin:3px 0 8px}
+  .paths-process .path-phase p{max-width:48ch}
+}

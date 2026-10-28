@@ -30,7 +30,7 @@ const areas = [
 ] as const;
 const phases = [
   ["Primo contatto", "Un primo contatto telefonico o online per raccogliere la richiesta e valutare la possibilità di avviare una consultazione."],
-  ["Consultazione e valutazione clinica", "Una fase iniziale di consultazione per approfondire la storia personale, comprendere le difficoltà e condividere gli obiettivi terapeutici."],
+  ["Valutazione iniziale", "Approfondiamo la storia personale, comprendiamo le difficoltà e condividiamo gli obiettivi terapeutici."],
   ["Percorso terapeutico", "Incontri regolari per elaborare i vissuti, affrontare le difficoltà e sviluppare strategie terapeutiche condivise."],
   ["Conclusione e verifiche", "Valutazione dei cambiamenti raggiunti, consolidamento delle risorse personali e conclusione condivisa del percorso."],
 ] as const;
@@ -53,7 +53,7 @@ export function PathsContent() {
 
     <section className="paths-areas section-shell" aria-labelledby="areas-title"><div className="paths-section-heading"><div><p className="eyebrow">AREE DI INTERVENTO</p><h2 id="areas-title">Le difficoltà che<br /><em>possiamo affrontare insieme</em></h2></div><p>Ogni percorso nasce dall'ascolto della storia personale e dalla comprensione delle difficoltà.</p></div><div className="paths-areas-grid">{[areas.slice(0, 4), areas.slice(4)].map((column, index) => <div className="paths-areas-column" key={index}>{column.map(([title, description, Icon]) => <article className="path-area" key={title}><Icon className="path-area-icon" size={24} strokeWidth={1.8} aria-hidden="true" focusable="false" /><div><h3>{title}</h3><p>{description}</p></div></article>)}</div>)}</div></section>
 
-    <section className="paths-process" aria-labelledby="phases-title"><div className="section-shell paths-process-grid"><div className="paths-process-heading"><p className="eyebrow">IL PERCORSO TERAPEUTICO</p><h2 id="phases-title">Un percorso,<br /><em>passo dopo passo</em></h2><p>Ogni percorso inizia con una fase di consultazione e si sviluppa attraverso obiettivi condivisi, incontri regolari e verifiche dei cambiamenti nel tempo.</p></div><ProcessTimeline steps={phases} /></div></section>
+    <section className="paths-process" aria-labelledby="phases-title"><div className="section-shell paths-process-grid"><div className="paths-process-heading"><p className="eyebrow">IL PERCORSO TERAPEUTICO</p><h2 id="phases-title">Un percorso,<br /><em>passo dopo passo</em></h2><p>Ogni percorso nasce dall’ascolto e si costruisce insieme, nel rispetto dei tempi di ciascuno.</p></div><ProcessTimeline steps={phases} /></div></section>
 
     <FirstStepCta id="percorsi-primo-passo" />
   </main>;
