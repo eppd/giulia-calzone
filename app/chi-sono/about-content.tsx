@@ -41,7 +41,7 @@ export function AboutContent() {
 
     <section id="approccio-clinico" className="bio-clinical section-shell" aria-labelledby="clinical-title">
       <div className="bio-clinical-intro">
-        <div className="bio-clinical-heading"><p className="eyebrow">IL MIO APPROCCIO</p><h2 id="clinical-title">Pensieri, emozioni<br /><em>e comportamenti.</em></h2></div>
+        <div className="bio-clinical-heading"><p className="eyebrow">IL MIO APPROCCIO</p><h2 id="clinical-title">Pensieri, emozioni<br /><em>e comportamenti</em></h2></div>
         <div className="bio-clinical-text">
           <p>Nell'approccio cognitivo-comportamentale, pensieri, emozioni e comportamenti sono strettamente collegati. Il modo in cui interpretiamo le esperienze influenza le emozioni che proviamo e le nostre reazioni.</p>
           <p>Alcuni pensieri automatici possono contribuire alla sofferenza. Per comprenderli e favorire il cambiamento, il percorso terapeutico integra interventi cognitivi e comportamentali.</p>
@@ -55,7 +55,7 @@ export function AboutContent() {
       <figure className="bio-studio"><Image src="/images/ambiente-consulenza.webp" alt="Immagine d’atmosfera: due poltrone, una libreria e luce naturale in uno spazio di ascolto" fill sizes="(max-width: 760px) 100vw, 92vw" /><figcaption>Uno spazio per fermarsi. E ripartire.</figcaption></figure>
     </section>
 
-    <section className="bio-pillars section-shell" aria-labelledby="pillars-title"><div className="bio-pillars-heading"><p className="eyebrow">I PILASTRI DEL MIO LAVORO</p><h2 id="pillars-title">Un lavoro costruito <em>insieme.</em></h2></div><div className="bio-pillars-grid">{pillars.map((pillar, index) => <article className="bio-pillar" key={pillar.title}><div className="bio-pillar-heading"><span className="bio-pillar-number">0{index + 1}</span><h3>{pillar.title}</h3></div><p>{pillar.text}</p></article>)}</div></section>
+    <section className="bio-pillars section-shell" aria-labelledby="pillars-title"><div className="bio-pillars-heading"><p className="eyebrow">I PILASTRI DEL MIO LAVORO</p><h2 id="pillars-title">Un lavoro costruito <em>insieme</em></h2></div><div className="bio-pillars-grid">{pillars.map((pillar, index) => <article className="bio-pillar" key={pillar.title}><div className="bio-pillar-heading"><span className="bio-pillar-number">0{index + 1}</span><h3>{pillar.title}</h3></div><p>{pillar.text}</p></article>)}</div></section>
 
     <section className="bio-personal" aria-labelledby="personal-title"><div className="section-shell bio-personal-grid"><Reveal><h2 id="personal-title">Ogni storia merita<br /><em>il proprio spazio</em></h2></Reveal><div><p>Ogni persona porta con sé una storia e bisogni differenti. Il percorso terapeutico si costruisce insieme, attraverso la comprensione delle difficoltà e la condivisione degli obiettivi.</p><Link className="text-link underlined" href="/percorsi/">Esplora i percorsi <ArrowUpRight size={18} /></Link></div></div></section>
 

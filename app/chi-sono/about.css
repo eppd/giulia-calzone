@@ -35,7 +35,7 @@
 .bio-pillars h2{font-size:clamp(30px,3vw,42px);letter-spacing:-1.4px}
 .bio-pillars-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-flow:dense;gap:32px;border-top:1px solid var(--line)}
 .bio-pillar{padding-top:25px}
-.bio-pillar-heading{display:flex;align-items:baseline;gap:12px}
+.bio-pillar-heading{display:flex;flex-direction:column;align-items:flex-start;gap:6px}
 .bio-pillar-number,.bio-pillar h3{font-family:var(--serif);font-weight:500;font-size:27px;line-height:1.3;letter-spacing:-.6px}
 .bio-pillar-number{flex:0 0 auto;color:var(--sage)}
 .bio-pillar h3{max-width:300px;margin:0}

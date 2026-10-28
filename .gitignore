@@ -5,3 +5,18 @@ node_modules/
 out/
 *.tsbuildinfo
 .env*
+
+# Screenshot e anteprime di sviluppo
+/*-preview.png
+/*-desktop.png
+/*-mobile.png
+/*-tablet.png
+/*-desktop.jpg
+/*-mobile.jpg
+/*-tablet.jpg
+
+# Screenshot di verifica
+/verification/
+
+# Log di sviluppo
+*.log
