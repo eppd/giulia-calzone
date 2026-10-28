@@ -14,7 +14,7 @@ const headerNavigation = navigation.filter(item => item.id !== "come-funziona");
 const contactHref = "/contatti/#modulo";
 
 export function Brand({ home = false, emblem = false }: { home?: boolean; emblem?: boolean }) {
-  return <Link className={emblem ? "brand brand-with-emblem" : "brand"} href={home ? "#home" : "/#home"} aria-label="Giulia Calzone, home">{emblem && <Image className="brand-emblem" src="/images/emblema-giulia-calzone-header.webp" alt="" width={192} height={141} priority />}<span>Giulia Calzone<span className="brand-dot">.</span></span><small>PSICOLOGA PSICOTERAPEUTA</small></Link>;
+  return <Link className={emblem ? "brand brand-with-emblem" : "brand"} href={home ? "#home" : "/#home"} aria-label="Giulia Calzone, home">{emblem && <Image className="brand-emblem" src="/images/emblema-giulia-calzone-header.webp" alt="" width={192} height={141} priority />}<span>Giulia Calzone</span><small>PSICOLOGA PSICOTERAPEUTA</small></Link>;
 }
 
 export function SiteHeader({ home = false, activePage = "chi-sono" }: { home?: boolean; activePage?: "chi-sono" | "percorsi" | "contatti" }) {

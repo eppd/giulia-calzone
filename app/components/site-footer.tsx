@@ -17,7 +17,7 @@ export function SiteFooter({ home = false }: { home?: boolean }) {
         <Link className="site-footer__brand" href={home ? "#home" : "/#home"} aria-label="Giulia Calzone, home">
           <Image className="site-footer__brand-emblem" src="/images/emblema-giulia-calzone-header.webp" alt="" width={192} height={141} />
           <span className="site-footer__brand-copy">
-            <span className="site-footer__brand-name">Giulia Calzone<span className="brand-dot">.</span></span>
+            <span className="site-footer__brand-name">Giulia Calzone</span>
             <small>PSICOLOGA PSICOTERAPEUTA</small>
           </span>
         </Link>
