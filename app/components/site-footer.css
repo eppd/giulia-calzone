@@ -5,7 +5,7 @@
 .site-footer__brand-emblem{display:block;width:50px;height:auto;object-fit:contain;flex:none}
 .site-footer__identity .site-footer__brand-copy{display:flex;flex-direction:column;min-width:0;font-family:var(--sans);font-size:inherit;font-weight:400;letter-spacing:normal;line-height:1.15}
 .site-footer__identity .site-footer__brand-name{font-family:var(--serif);font-size:21px;font-weight:600;letter-spacing:-.7px;line-height:1.15;color:var(--ink)}
-.site-footer__brand-copy small{margin-top:5px;font-size:10px;letter-spacing:1.8px;line-height:1.15;color:var(--muted)}
+.site-footer__brand-copy small{margin-top:5px;font-size:10px;letter-spacing:1.8px;line-height:1.15;color:var(--terracotta)}
 .site-footer .site-footer__identity>a.site-footer__brand:hover{color:var(--ink);text-decoration-color:transparent}
 .site-footer__identity>p{max-width:285px;margin:18px 0 0;font-size:15px;line-height:1.8;color:var(--body-copy)}
 .site-footer__column h2{margin:3px 0 18px;font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.035em;line-height:1.5;color:var(--ink)}
