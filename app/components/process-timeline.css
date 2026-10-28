@@ -13,11 +13,11 @@
 .process .process-heading{margin-bottom:54px}
 .process .process-heading>p:not(.eyebrow){max-width:920px;margin:22px 0 17px}
 .process .paths-timeline{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
-.process .paths-timeline::before{content:"";position:absolute;top:22px;left:12.5%;right:12.5%;height:1px;background:var(--line-strong);opacity:.8}
+.process .paths-timeline::before{content:"";position:absolute;top:25px;left:12.5%;right:12.5%;height:1px;background:var(--line-strong);opacity:.8}
 .process .path-phase{display:flex;flex-direction:column;gap:0;padding:0 16px}
 .process .path-phase:not(:last-child)::after{display:none}
-.process .path-phase-marker{position:relative;z-index:1;align-self:center;width:44px;height:44px;border:1px solid var(--line-strong);border-radius:50%;background:var(--paper);color:var(--sage-dark)}
-.process .path-phase-marker>svg{width:21px;height:21px;stroke-width:1.8}
+.process .path-phase-marker{position:relative;z-index:1;align-self:center;width:50px;height:50px;border:1px solid var(--line-strong);border-radius:50%;background:var(--paper);color:var(--sage-dark)}
+.process .path-phase-marker>svg{width:28px;height:28px;stroke-width:1.6}
 .process .path-phase h3{font-size:clamp(22px,2vw,26px);line-height:1.24;margin:19px 0 10px}
 .process .path-phase p{max-width:34ch}
 
@@ -35,10 +35,12 @@
   .process .process-heading{margin-bottom:34px}
   .process .process-heading>p:not(.eyebrow){margin-top:20px}
   .process .paths-timeline{grid-template-columns:1fr;gap:0}
-  .process .paths-timeline::before{display:block;top:22px;bottom:22px;left:21px;right:auto;width:1px;height:auto}
-  .process .path-phase{display:grid;grid-template-columns:44px minmax(0,1fr);column-gap:17px;padding:0 0 28px}
+  .process .paths-timeline::before{display:block;top:24px;bottom:24px;left:24px;right:auto;width:1px;height:auto}
+  .process .path-phase{display:grid;grid-template-columns:48px minmax(0,1fr);column-gap:17px;padding:0 0 28px}
   .process .path-phase:last-child{padding-bottom:0}
   .process .path-phase-marker{align-self:start}
+  .process .path-phase-marker{width:48px;height:48px}
+  .process .path-phase-marker>svg{width:26px;height:26px}
   .process .path-phase h3{font-size:25px;margin:3px 0 8px}
   .process .path-phase p{max-width:48ch}
 }

@@ -1,7 +1,7 @@
 import "./process-timeline.css";
-import { HandHeart, MessageCircle, MessageCircleHeart, Sprout } from "lucide-react";
+import { Ear, HandHeart, MessageCircle, Sprout } from "lucide-react";
 
-const phaseIcons = [MessageCircle, MessageCircleHeart, Sprout, HandHeart] as const;
+const phaseIcons = [MessageCircle, Ear, Sprout, HandHeart] as const;
 
 type ProcessTimelineProps = {
   steps: readonly (readonly [title: string, description: string])[];

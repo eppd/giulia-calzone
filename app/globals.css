@@ -140,5 +140,5 @@ h1 em,h2 em{color:var(--sage-soft)}
 @media (min-width: 761px) { .hero-copy { padding-left: 0; } }
 
 /* Larger icons within the original open layout below the homepage hero. */
-#home .hero-bottom .highlight>svg{width:34px;height:34px;flex:0 0 auto}
-@media(max-width:760px){#home .hero-bottom .highlight>svg{width:32px;height:32px}}
+#home .hero-bottom .highlight>svg{width:28px;height:28px;flex:0 0 auto}
+@media(max-width:760px){#home .hero-bottom .highlight>svg{width:26px;height:26px}}
