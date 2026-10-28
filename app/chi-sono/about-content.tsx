@@ -37,7 +37,7 @@ export function AboutContent() {
       <figure className="bio-portrait"><Image src={professionalPortrait} alt="Giulia Calzone seduta in poltrona in un salotto luminoso" fill priority sizes="(max-width: 760px) 100vw, 35vw" /></figure>
     </section>
 
-    <section id="visione" className="bio-vision" aria-labelledby="vision-title"><div className="section-shell"><p className="eyebrow">LA MIA VISIONE</p><Reveal className="bio-vision-heading"><h2 id="vision-title"><span>Ali</span><span className="bio-vision-and">e</span><em>radici</em></h2></Reveal><div className="bio-vision-bottom"><span className="bio-vision-note">La tua storia.<br />Le tue possibilità.</span><p>Le radici raccontano la nostra storia e ciò che ci ha formati. Le ali rappresentano le risorse e le possibilità di cambiamento. Nel mio lavoro, comprendere le prime significa dare forza alle seconde.</p></div></div></section>
+    <section id="visione" className="bio-vision" aria-labelledby="vision-title"><div className="section-shell"><p className="eyebrow">LA MIA VISIONE</p><Reveal className="bio-vision-heading"><h2 id="vision-title"><span>Ali</span><span className="bio-vision-and">e</span><em>radici</em></h2></Reveal><div className="bio-vision-bottom"><span className="bio-vision-note">La tua storia.<br /> Le tue possibilità.</span><p>Le radici raccontano la nostra storia e ciò che ci ha formati. Le ali rappresentano le risorse e le possibilità di cambiamento. Nel mio lavoro, comprendere le prime significa dare forza alle seconde.</p></div></div></section>
 
     <section id="approccio-clinico" className="bio-clinical section-shell" aria-labelledby="clinical-title">
       <div className="bio-clinical-intro">
