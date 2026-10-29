@@ -35,10 +35,11 @@
   .process .process-heading{margin-bottom:34px}
   .process .process-heading>p:not(.eyebrow){margin-top:20px}
   .process .paths-timeline{grid-template-columns:1fr;gap:0}
-  .process .paths-timeline::before{display:block;top:24px;bottom:24px;left:24px;right:auto;width:1px;height:auto}
+  .process .paths-timeline::before{display:none}
   .process .path-phase{display:grid;grid-template-columns:48px minmax(0,1fr);column-gap:17px;padding:0 0 28px}
   .process .path-phase:last-child{padding-bottom:0}
-  .process .path-phase-marker{align-self:start}
+  .process .path-phase:not(:last-child)::after{display:block;left:23.5px;top:48px;bottom:-24px;width:1px;background:var(--line-strong);opacity:.8}
+  .process .path-phase-marker{position:relative;z-index:1;align-self:start}
   .process .path-phase-marker{width:48px;height:48px}
   .process .path-phase-marker>svg{width:26px;height:26px}
   .process .path-phase h3{font-size:25px;margin:3px 0 8px}
