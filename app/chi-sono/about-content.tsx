@@ -49,8 +49,8 @@ export function AboutContent() {
       </div>
       <div className="bio-clinical-practice">
         <div className="bio-practice-divider" aria-hidden="true" />
-        <article aria-labelledby="cognitive-title"><h3 id="cognitive-title">Interventi cognitivi</h3><p>Attraverso il lavoro cognitivo esploriamo i pensieri che alimentano la sofferenza, il loro significato e le possibili interpretazioni alternative.</p></article>
-        <article aria-labelledby="behavioural-title"><h3 id="behavioural-title">Interventi comportamentali</h3><p>Con il lavoro comportamentale sviluppiamo strategie concrete per modificare comportamenti poco funzionali e affrontare le difficoltà quotidiane.</p></article>
+        <article aria-labelledby="cognitive-title"><h3 id="cognitive-title">Interventi cognitivi</h3><p>Esploriamo i pensieri automatici che possono alimentare la sofferenza, il loro significato personale e le possibili interpretazioni alternative.</p></article>
+        <article aria-labelledby="behavioural-title"><h3 id="behavioural-title">Interventi comportamentali</h3><p>Individuiamo strategie concrete per modificare i comportamenti che non ti aiutano e affrontare le difficoltà quotidiane in modo più funzionale.</p></article>
       </div>
       <figure className="bio-studio"><Image src="/images/ambiente-consulenza.webp" alt="Immagine d’atmosfera: due poltrone, una libreria e luce naturale in uno spazio di ascolto" fill sizes="(max-width: 760px) 100vw, 92vw" /><figcaption>Uno spazio per fermarsi. E ripartire.</figcaption></figure>
     </section>
