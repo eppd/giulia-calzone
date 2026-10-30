@@ -10,7 +10,7 @@ export function FirstStepCta({ id }: FirstStepCtaProps) {
   const titleId = `${id}-title`;
 
   return (
-    <section id={id} className="pause section-shell" aria-labelledby={titleId}>
+    <section id={id} className="pause section-shell" data-scroll-reveal aria-labelledby={titleId}>
       <div className="cta-photo">
         <Image
           src="/images/cta-ambiente.webp?v=2"

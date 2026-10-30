@@ -12,7 +12,7 @@ export function ProcessTimeline({ steps }: ProcessTimelineProps) {
     {steps.map(([title, description], index) => {
       const Icon = phaseIcons[index] ?? MessageCircle;
       return (
-        <li className="path-phase" key={title}>
+        <li className="path-phase" data-scroll-reveal key={title}>
           <span className="path-phase-marker" aria-hidden="true">
             <Icon size={26} strokeWidth={1.65} focusable="false" />
           </span>

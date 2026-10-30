@@ -1,19 +1,11 @@
-"use client";
-
 import Link from "next/link";
 
 import Image from "next/image";
 import { ArrowUpRight, ArrowRight, Leaf, LockKeyhole, MessageCircle } from "lucide-react";
-import { useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
 
 import { Reveal } from "./components/reveal";
 import { FirstStepCta } from "./components/first-step-cta";
 import { ProcessTimeline } from "./components/process-timeline";
-
-gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const services = [
   { id: "individuale", number: "01", tag: "INDIVIDUALE", title: "Psicoterapia individuale", text: "Un percorso per affrontare ansia, stress e difficoltà emotive, valorizzando le proprie risorse.", image: "/images/individuale-ambiente.webp", alt: "Poltrona color crema con cuscino salvia accanto a un tavolino e una finestra luminosa", detail: "Uno spazio dedicato a ciò che stai vivendo. Nel primo colloquio esploriamo le tue esigenze e valutiamo insieme obiettivi, modalità e possibilità del percorso individuale." },
@@ -28,32 +20,11 @@ const steps = [
 ] as const;
 
 export default function Home() {
-  const scope = useRef<HTMLElement>(null);
-  useGSAP(() => {
-    const media = gsap.matchMedia();
-    media.add("(prefers-reduced-motion: no-preference)", () => {
-      gsap.utils.toArray<HTMLElement>(".hero-bottom .highlight").forEach((highlight, index) => {
-        gsap.fromTo(highlight, { opacity: 0, y: 12 }, {
-          opacity: 1,
-          y: 0,
-          duration: .55,
-          delay: index * .08,
-          ease: "power2.out",
-          clearProps: "opacity,transform",
-          scrollTrigger: { trigger: highlight, start: "top 90%", once: true },
-        });
-      });
-      gsap.utils.toArray<HTMLElement>(".service-image").forEach(image => {
-        gsap.fromTo(image, { scale: .96 }, { scale: 1, ease: "none", scrollTrigger: { trigger: image, start: "top 90%", end: "top 50%", scrub: .8 } });
-      });
-    });
-    return () => media.revert();
-  }, { scope });
-  return <main ref={scope} id="main">
+  return <main id="main">
       <section id="home" className="hero section-shell">
         <div className="hero-main"><Reveal className="hero-copy"><p className="eyebrow"><span /> PSICOLOGA E PSICOTERAPEUTA · CREMA</p><h1>Uno spazio per<br />ritrovare il tuo<br /><em>equilibrio</em></h1><p className="hero-description">Psicoterapia a Crema e online, con ascolto e percorsi personalizzati per il benessere psicologico.</p><div className="hero-actions"><a className="button primary" href="#come-funziona">Come funziona il percorso <ArrowUpRight size={17} /></a><a className="text-link" href="#approccio">Scopri il mio approccio <ArrowRight size={17} /></a></div><div className="hero-location"><span className="status-dot" /> In studio a Crema e online <span className="small-divider" /> Uno spazio, anche a distanza</div></Reveal>
         <Reveal className="hero-visual"><div className="image-frame"><Image src="/images/giulia-ritratto-home-nuovo.webp" alt="Giulia Calzone seduta in poltrona in un salotto luminoso, tra piante e una libreria" fill priority sizes="(max-width: 760px) 100vw, 48vw" className="hero-image" /><div className="image-grain" /></div><div className="vertical-caption">ASCOLTO. CURA. POSSIBILITÀ.</div></Reveal></div>
-        <div className="hero-bottom"><div className="highlight"><LockKeyhole size={34} strokeWidth={1.6} aria-hidden="true" /><div><h2>Uno spazio riservato</h2><p>Un ambiente accogliente e senza giudizio,<br className="desktop-break" /> dove sentirti libero di raccontarti.</p></div></div><div className="highlight"><Leaf size={34} strokeWidth={1.6} aria-hidden="true" /><div><h2>Un percorso personale</h2><p>Un percorso costruito insieme, nel rispetto<br className="desktop-break" /> dei tuoi bisogni e dei tuoi tempi.</p></div></div><div className="highlight"><MessageCircle size={34} strokeWidth={1.6} aria-hidden="true" /><div><h2>Un primo incontro</h2><p>Un momento per conoscerci e dare spazio a ciò che stai vivendo.</p></div></div></div>
+        <div className="hero-bottom"><div className="highlight" data-scroll-reveal><LockKeyhole size={34} strokeWidth={1.6} aria-hidden="true" /><div><h2>Uno spazio riservato</h2><p>Un ambiente accogliente e senza giudizio,<br className="desktop-break" /> dove sentirti libero di raccontarti.</p></div></div><div className="highlight" data-scroll-reveal><Leaf size={34} strokeWidth={1.6} aria-hidden="true" /><div><h2>Un percorso personale</h2><p>Un percorso costruito insieme, nel rispetto<br className="desktop-break" /> dei tuoi bisogni e dei tuoi tempi.</p></div></div><div className="highlight" data-scroll-reveal><MessageCircle size={34} strokeWidth={1.6} aria-hidden="true" /><div><h2>Un primo incontro</h2><p>Un momento per conoscerci e dare spazio a ciò che stai vivendo.</p></div></div></div>
       </section>
 
       <section id="chi-sono" className="about section-shell"><Reveal className="about-image"><Image src="/images/ambiente-consulenza.webp" alt="Studio accogliente con due poltrone, una libreria e luce naturale" fill sizes="(max-width: 760px) 100vw, 42vw" /><span className="photo-caption">Uno spazio per fermarsi. E ripartire.</span></Reveal><Reveal className="about-copy"><p className="eyebrow">CHI SONO</p><h2>La persona,<br /><em>prima di tutto</em></h2><p>Sono Giulia Calzone, psicologa e psicoterapeuta a orientamento cognitivo-comportamentale a Crema.</p><p>Credo in una relazione terapeutica fondata sulla fiducia e sull'ascolto. Ogni percorso nasce dalla storia personale, dalle difficoltà e dalle risorse di ciascuno.</p><Link className="text-link underlined" href="/chi-sono/">Conosci Giulia <ArrowUpRight size={18} /></Link><div id="approccio" className="approach"><span>IL MIO APPROCCIO</span><p>Integro strumenti cognitivo-comportamentali e attenzione alla relazione terapeutica, per comprendere pensieri, emozioni e comportamenti e costruire insieme nuove possibilità.</p></div></Reveal></section>
