@@ -50,44 +50,34 @@
 .paths-page .pause{margin-top:80px}
 @media(max-width:760px){.paths-page .pause{margin-top:56px}}
 
-/* A wide, editorial reading of the four therapeutic phases, scoped to /percorsi. */
+/* Four connected editorial columns, with a vertical reading on smaller screens. */
 .paths-process-grid{display:block}
-.paths-process-heading{display:block;margin-bottom:54px}
-.paths-process-heading>.eyebrow{margin-bottom:18px}
+.paths-process-heading{display:grid;grid-template-columns:1.1fr .9fr;column-gap:clamp(40px,6vw,88px);align-items:end;margin:0 0 56px}
+.paths-process-heading>.eyebrow{grid-column:1/-1;margin-bottom:18px}
 .paths-process-heading>h2{margin:0}
-.paths-process-heading>p:not(.eyebrow){max-width:none;margin:16px 0 0;font-size:clamp(14px,1.4vw,17px);line-height:1.7;white-space:nowrap}
-.paths-process .paths-timeline{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
-.paths-process .paths-timeline::before{content:"";position:absolute;top:25px;left:12.5%;right:12.5%;height:1px;background:var(--line-strong);opacity:.8}
-.paths-process .path-phase{display:flex;flex-direction:column;gap:0;padding:0 16px}
-.paths-process .path-phase:not(:last-child)::after{display:none}
-.paths-process .path-phase-marker{position:relative;z-index:1;align-self:center;width:50px;height:50px;border:1px solid var(--line-strong);border-radius:50%;background:var(--sage-light);color:var(--sage-dark)}
-.paths-process .path-phase-marker>svg{width:28px;height:28px;stroke-width:1.6}
-.paths-process .path-phase h3{font-size:clamp(22px,2vw,26px);line-height:1.24;margin:19px 0 10px}
-.paths-process .path-phase p{max-width:34ch}
+.paths-process-heading>p:not(.eyebrow){max-width:40ch;margin:0 0 4px;font-size:18px;line-height:1.85;color:var(--body-copy)}
+.paths-process .paths-timeline{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;min-width:0}
+.paths-process .paths-timeline::before{display:none}
+.paths-process .path-phase{display:flex;flex-direction:column;gap:0;padding:0;min-width:0}
+.paths-process .path-phase:not(:last-child)::after{display:block;left:54px;right:-24px;top:22.5px;bottom:auto;width:auto;height:1px;background:var(--line-strong);opacity:.8}
+.paths-process .path-phase-marker{position:relative;z-index:1;align-self:start;width:46px;height:46px;border:1px solid var(--line-strong);border-radius:50%;background:var(--sage-light);color:var(--sage-dark)}
+.paths-process .path-phase-marker>svg{width:26px;height:26px;stroke-width:1.6}
+.paths-process .path-phase h3{font-size:26px;line-height:1.25;margin:22px 0 13px}
+.paths-process .path-phase p{max-width:none}
 
 @media(max-width:1000px){
-  .paths-process-heading{margin-bottom:42px}
-  .paths-process-heading>p:not(.eyebrow){white-space:normal}
-  .paths-process .paths-timeline{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:34px}
-  .paths-process .paths-timeline::before{display:none}
-  .paths-process .path-phase{padding-inline:14px}
-  .paths-process .path-phase-marker{align-self:flex-start}
-  .paths-process .path-phase h3{margin-top:15px}
-  .paths-process .path-phase p{max-width:42ch}
+  .paths-process-heading{column-gap:36px;margin-bottom:40px}
+  .paths-process .paths-timeline{display:block}
+  .paths-process .path-phase{display:grid;grid-template-columns:46px minmax(0,1fr);gap:24px;padding-bottom:32px}
+  .paths-process .path-phase:last-child{padding-bottom:0}
+  .paths-process .path-phase:not(:last-child)::after{left:22.5px;right:auto;top:54px;bottom:8px;width:1px;height:auto}
+  .paths-process .path-phase h3{margin:5px 0 9px}
+  .paths-process .path-phase p{max-width:60ch}
 }
 
 @media(max-width:760px){
-  .paths-process-grid{display:block}
   .paths-process-heading{display:block;margin-bottom:34px}
-  .paths-process-heading>p:not(.eyebrow){margin-top:20px}
-  .paths-process .paths-timeline{grid-template-columns:1fr;gap:0;padding-left:0}
-  .paths-process .paths-timeline::before{display:none}
-  .paths-process .path-phase{display:grid;grid-template-columns:48px minmax(0,1fr);column-gap:17px;padding:0 0 28px}
-  .paths-process .path-phase:last-child{padding-bottom:0}
-  .paths-process .path-phase:not(:last-child)::after{display:block;left:23.5px;top:48px;bottom:-24px;width:1px;background:var(--line-strong);opacity:.8}
-  .paths-process .path-phase-marker{position:relative;z-index:1;align-self:start}
-  .paths-process .path-phase-marker{width:48px;height:48px}
-  .paths-process .path-phase-marker>svg{width:26px;height:26px}
-  .paths-process .path-phase h3{font-size:25px;margin:3px 0 8px}
-  .paths-process .path-phase p{max-width:48ch}
+  .paths-process-heading>p:not(.eyebrow){max-width:52ch;margin:20px 0 0;font-size:17px}
+  .paths-process .path-phase{column-gap:17px;padding-bottom:28px}
+  .paths-process .path-phase h3{font-size:25px;margin:5px 0 8px}
 }

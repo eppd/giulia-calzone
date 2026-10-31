@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import Image from "next/image";
-import { ArrowUpRight, ArrowRight, Leaf, LockKeyhole, MessageCircle } from "lucide-react";
+import { ArrowUpRight, ArrowRight, CircleCheck, Ear, Leaf, LockKeyhole, MessageCircle, Sprout } from "lucide-react";
 
 import { Reveal } from "./components/reveal";
 import { FirstStepCta } from "./components/first-step-cta";
@@ -13,10 +13,10 @@ const services = [
   { id: "genitorialita", number: "03", tag: "FAMIGLIA", title: "Sostegno alla genitorialità", text: "Un supporto per comprendere i bisogni dei figli e affrontare le difficoltà educative e familiari.", image: "/images/genitorialita-ambiente.webp", alt: "Scrivania in legno con sedute vuote, un quaderno e piccoli giochi in legno", detail: "Un momento per fermarsi, condividere le difficoltà e riflettere sul proprio ruolo genitoriale. A partire dalle tue domande, definiamo insieme il tipo di sostegno più adatto." },
 ];
 const steps = [
-  ["Primo contatto", "Un primo contatto telefonico o online per raccogliere la richiesta e valutare la possibilità di avviare una consultazione."],
-  ["Valutazione iniziale", "Approfondiamo la storia personale, comprendiamo le difficoltà e condividiamo gli obiettivi terapeutici."],
-  ["Percorso terapeutico", "Incontri regolari per elaborare i vissuti, affrontare le difficoltà e sviluppare strategie terapeutiche condivise."],
-  ["Conclusione e verifiche", "Valutazione dei cambiamenti raggiunti, consolidamento delle risorse personali e conclusione condivisa del percorso."],
+  ["Primo contatto", "Ascoltiamo la tua richiesta e valutiamo come iniziare."],
+  ["Valutazione iniziale", "Comprendiamo la tua storia e definiamo gli obiettivi."],
+  ["Percorso terapeutico", "Affrontiamo le difficoltà con strategie condivise."],
+  ["Conclusione e verifiche", "Valutiamo i cambiamenti e consolidiamo le risorse."],
 ] as const;
 
 export default function Home() {
@@ -31,7 +31,7 @@ export default function Home() {
 
       <section id="percorsi" className="services"><div className="section-shell"><Reveal className="section-heading"><div><p className="eyebrow">COME POSSO AIUTARTI</p><h2>Percorsi pensati <em>per te</em></h2></div><p>Tre percorsi di psicoterapia e sostegno, pensati per le esigenze di ciascuno.</p></Reveal><div className="services-grid">{services.map(service => <Reveal className="service" key={service.number}><div className="service-image"><Image src={service.image} alt={service.alt} fill sizes="(max-width: 760px) 100vw, 33vw" /></div><p className="eyebrow service-tag">{service.number} / {service.tag}</p><h3>{service.title}</h3><p>{service.text}</p><Link className="service-link" href={`/percorsi/#${service.id}`} aria-label={`Scopri il percorso: ${service.title}`}>Scopri il percorso <ArrowUpRight size={18} /></Link></Reveal>)}</div></div></section>
 
-      <section id="come-funziona" className="process section-shell"><Reveal className="process-heading"><p className="eyebrow">IL PERCORSO TERAPEUTICO</p><h2>Un percorso,<br /><em>passo dopo passo</em></h2><p>Ogni percorso nasce dall’ascolto e si costruisce insieme, nel rispetto dei tempi di ciascuno.</p></Reveal><ProcessTimeline steps={steps} /></section>
+      <section id="come-funziona" className="process section-shell"><Reveal className="process-heading"><p className="eyebrow">COME FUNZIONA</p><h2>Un percorso,<br /><em>passo dopo passo</em></h2><p>Ogni percorso nasce dall’ascolto e si costruisce insieme, nel rispetto dei tempi di ciascuno.</p><Link className="text-link underlined process-link" href="/percorsi/">Scopri i percorsi e servizi <ArrowUpRight size={17} /></Link></Reveal><ProcessTimeline steps={steps} icons={[MessageCircle, Ear, Sprout, CircleCheck]} /></section>
 
       <FirstStepCta id="primo-passo" />
     </main>;
