@@ -19,27 +19,27 @@ export function AboutContent() {
       <figure className="bio-portrait"><Image src={professionalPortrait} alt="Giulia Calzone seduta in poltrona in un salotto luminoso" fill priority sizes="(max-width: 760px) 100vw, 35vw" /></figure>
     </section>
 
-    <section id="visione" className="bio-vision" aria-labelledby="vision-title"><div className="section-shell"><p className="eyebrow">LA MIA VISIONE</p><Reveal className="bio-vision-heading"><h2 id="vision-title"><span>Ali</span><span className="bio-vision-and">e</span><em>radici</em></h2></Reveal><div className="bio-vision-bottom" data-scroll-reveal><span className="bio-vision-note">La tua storia.<br /> Le tue possibilità.</span><p>Le radici raccontano la nostra storia e ciò che ci ha formati. Le ali rappresentano le risorse e le possibilità di cambiamento. Nel mio lavoro, comprendere le prime significa dare forza alle seconde.</p></div></div></section>
+    <section id="visione" className="bio-vision" aria-labelledby="vision-title"><div className="section-shell"><p className="eyebrow">LA MIA VISIONE</p><Reveal className="bio-vision-heading"><h2 id="vision-title"><span>Ali</span><span className="bio-vision-and">e</span><em>radici</em></h2></Reveal><div className="bio-vision-bottom" data-scroll-reveal><span className="bio-vision-note">La tua storia.<br /> Le tue possibilità.</span><p>Le radici raccontano la nostra storia. Le ali rappresentano le possibilità di cambiamento. Comprendere le radici aiuta a rafforzare le ali.</p></div></div></section>
 
     <section id="approccio-clinico" className="bio-clinical section-shell" aria-labelledby="clinical-title">
       <div className="bio-clinical-intro" data-scroll-reveal>
         <div className="bio-clinical-heading"><p className="eyebrow">IL MIO APPROCCIO</p><h2 id="clinical-title">Pensieri, emozioni<br /><em>e comportamenti</em></h2></div>
         <div className="bio-clinical-text">
           <p>Nell'approccio cognitivo-comportamentale, pensieri, emozioni e comportamenti sono strettamente collegati. Il modo in cui interpretiamo le esperienze influenza le emozioni che proviamo e le nostre reazioni.</p>
-          <p>Alcuni pensieri automatici possono contribuire alla sofferenza. Per comprenderli e favorire il cambiamento, il percorso terapeutico integra interventi cognitivi e comportamentali.</p>
+          <p>Alcuni pensieri automatici, di cui non sempre siamo consapevoli, possono contribuire alla sofferenza. Per comprenderli, il percorso integra interventi cognitivi e comportamentali.</p>
         </div>
       </div>
       <div className="bio-clinical-practice" data-scroll-reveal>
         <div className="bio-practice-divider" aria-hidden="true" />
         <article aria-labelledby="cognitive-title"><h3 id="cognitive-title">Interventi cognitivi</h3><p>Esploriamo i pensieri automatici che possono alimentare la sofferenza, il loro significato personale e le possibili interpretazioni alternative.</p></article>
-        <article aria-labelledby="behavioural-title"><h3 id="behavioural-title">Interventi comportamentali</h3><p>Individuiamo strategie concrete per modificare i comportamenti che non ti aiutano e affrontare le difficoltà quotidiane in modo più funzionale.</p></article>
+        <article aria-labelledby="behavioural-title"><h3 id="behavioural-title">Interventi comportamentali</h3><p>Individuiamo strategie concrete per modificare i comportamenti che non ti aiutano e affrontare le difficoltà quotidiane con più consapevolezza.</p></article>
       </div>
       <figure className="bio-studio" data-scroll-reveal><Image src="/images/ambiente-consulenza.webp" alt="Immagine d’atmosfera: due poltrone, una libreria e luce naturale in uno spazio di ascolto" fill sizes="(max-width: 760px) 100vw, 92vw" /><figcaption>Uno spazio per fermarsi. E ripartire.</figcaption></figure>
     </section>
 
     <section className="bio-pillars section-shell" aria-labelledby="pillars-title"><div className="bio-pillars-heading" data-scroll-reveal><p className="eyebrow">I PILASTRI DEL MIO LAVORO</p><h2 id="pillars-title">Un lavoro costruito <em>insieme</em></h2></div><div className="bio-pillars-grid" data-scroll-reveal>{pillars.map((pillar, index) => <article className="bio-pillar" key={pillar.title}><div className="bio-pillar-heading"><span className="bio-pillar-number">0{index + 1}</span><h3>{pillar.title}</h3></div><p>{pillar.text}</p></article>)}</div></section>
 
-    <section className="bio-personal" aria-labelledby="personal-title"><div className="section-shell bio-personal-grid"><Reveal><h2 id="personal-title">Ogni storia merita<br /><em>il proprio spazio</em></h2></Reveal><div data-scroll-reveal><p>Ogni persona porta con sé una storia e bisogni differenti. Il percorso terapeutico si costruisce insieme, attraverso la comprensione delle difficoltà e la condivisione degli obiettivi.</p><Link className="text-link underlined" href="/percorsi/">Esplora i percorsi <ArrowUpRight size={18} /></Link></div></div></section>
+    <section className="bio-personal" aria-labelledby="personal-title"><div className="section-shell bio-personal-grid"><Reveal><h2 id="personal-title">Ogni storia merita<br /><em>il proprio spazio</em></h2></Reveal><div data-scroll-reveal><p>Ogni persona porta con sé una storia e bisogni differenti. Per questo, difficoltà e obiettivi vengono esplorati e condivisi nel percorso terapeutico.</p><Link className="text-link underlined" href="/percorsi/">Esplora i percorsi <ArrowUpRight size={18} /></Link></div></div></section>
 
     <FirstStepCta id="chi-sono-primo-passo" />
   </main>;
