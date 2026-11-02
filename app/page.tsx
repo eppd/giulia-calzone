@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import Image from "next/image";
-import { ArrowUpRight, ArrowRight, Leaf, LockKeyhole, MessageCircle, Search, Sprout, Sun } from "lucide-react";
+import { ArrowUpRight, ArrowRight, CircleCheck, Leaf, LockKeyhole, MessageCircle, Search, Sprout } from "lucide-react";
 
 import { Reveal } from "./components/reveal";
 import { FirstStepCta } from "./components/first-step-cta";
@@ -31,7 +31,7 @@ export default function Home() {
 
       <section id="percorsi" className="services"><div className="section-shell"><Reveal className="section-heading"><div><p className="eyebrow">COME POSSO AIUTARTI</p><h2>Percorsi pensati <em>per te</em></h2></div><p>Tre percorsi di psicoterapia e sostegno, pensati per le esigenze di ciascuno.</p></Reveal><div className="services-grid">{services.map(service => <Reveal className="service" key={service.number}><div className="service-image"><Image src={service.image} alt={service.alt} fill sizes="(max-width: 760px) 100vw, 33vw" /></div><p className="eyebrow service-tag">{service.tag}</p><h3>{service.title}</h3><p>{service.text}</p><Link className="service-link" href={`/percorsi/#${service.id}`} aria-label={`Scopri il percorso: ${service.title}`}>Scopri il percorso <ArrowUpRight size={18} /></Link></Reveal>)}</div></div></section>
 
-      <section id="come-funziona" className="process section-shell"><Reveal className="process-heading"><p className="eyebrow">COME FUNZIONA</p><h2>Un percorso,<br /><em>passo dopo passo</em></h2><p>Ogni percorso nasce dall’ascolto e si costruisce insieme, nel rispetto dei tempi di ciascuno.</p><Link className="text-link underlined process-link" href="/percorsi/">Scopri i percorsi e servizi <ArrowUpRight size={17} /></Link></Reveal><ProcessTimeline steps={steps} icons={[MessageCircle, Search, Sprout, Sun]} /></section>
+      <section id="come-funziona" className="process section-shell"><Reveal className="process-heading"><p className="eyebrow">COME FUNZIONA</p><h2>Un percorso,<br /><em>passo dopo passo</em></h2><p>Ogni percorso nasce dall’ascolto e si costruisce insieme, nel rispetto dei tempi di ciascuno.</p><Link className="text-link underlined process-link" href="/percorsi/">Scopri i percorsi e servizi <ArrowUpRight size={17} /></Link></Reveal><ProcessTimeline steps={steps} icons={[MessageCircle, Search, Sprout, CircleCheck]} /></section>
 
       <FirstStepCta id="primo-passo" />
     </main>;

@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import Image from "next/image";
-import { ArrowDown, ArrowUpRight, Wind, Waves, Infinity, CloudSun, Heart, Flower2, Sprout, HandHeart, Phone, MessagesSquare, CircleCheck } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Wind, Waves, Infinity, CloudSun, Heart, Flower2, Sprout, HandHeart, MessageCircle, Search, CircleCheck } from "lucide-react";
 import { FirstStepCta } from "../components/first-step-cta";
 import { ProcessTimeline } from "../components/process-timeline";
 
@@ -42,7 +42,7 @@ export function PathsContent() {
           <h2 id="phases-title">Un percorso,<br /><em>passo dopo passo</em></h2>
           <p>Ogni percorso nasce dall’ascolto e si costruisce insieme, nel rispetto dei tempi di ciascuno.</p>
         </div>
-        <ProcessTimeline steps={phases} icons={[Phone, MessagesSquare, Sprout, CircleCheck]} />
+        <ProcessTimeline steps={phases} icons={[MessageCircle, Search, Sprout, CircleCheck]} />
       </div>
     </section>
 
