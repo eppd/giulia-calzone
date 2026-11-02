@@ -143,6 +143,8 @@ h1 em,h2 em{color:var(--sage-soft)}
 #home .hero-bottom .highlight>svg{width:28px;height:28px;flex:0 0 auto}
 @media(max-width:760px){#home .hero-bottom .highlight>svg{width:26px;height:26px}}
 
+@media(max-width:760px){.hero-visual{padding-bottom:0}.vertical-caption{display:none}}
+
 /* Tablet: keep each service together without squeezing three text columns. */
 @media (min-width: 761px) and (max-width: 1000px) {
   #percorsi .services-grid { grid-template-columns: minmax(0, 1fr); gap: 40px; }
