@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import Image from "next/image";
-import { ArrowDown, ArrowUpRight, Wind, Waves, Infinity, CloudSun, Heart, Flower2, Sprout, HandHeart } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Wind, Waves, Infinity, CloudSun, Heart, Flower2, Sprout, HandHeart, Phone, MessagesSquare, CircleCheck } from "lucide-react";
 import { FirstStepCta } from "../components/first-step-cta";
 import { ProcessTimeline } from "../components/process-timeline";
 
@@ -35,7 +35,16 @@ export function PathsContent() {
 
     <section className="paths-areas section-shell" aria-labelledby="areas-title"><div className="paths-section-heading"><div><p className="eyebrow">AREE DI INTERVENTO</p><h2 id="areas-title">Le difficoltà che<br /><em>possiamo affrontare insieme</em></h2></div><p>Ogni percorso nasce dall'ascolto della storia personale e dalla comprensione delle difficoltà.</p></div><div className="paths-areas-grid">{[areas.slice(0, 4), areas.slice(4)].map((column, index) => <div className="paths-areas-column" key={index}>{column.map(([title, description, Icon]) => <article className="path-area" key={title}><Icon className="path-area-icon" size={24} strokeWidth={1.8} aria-hidden="true" focusable="false" /><div><h3>{title}</h3><p>{description}</p></div></article>)}</div>)}</div></section>
 
-    <section className="paths-process" aria-labelledby="phases-title"><div className="section-shell paths-process-grid"><div className="paths-process-heading" data-scroll-reveal><p className="eyebrow">IL PERCORSO TERAPEUTICO</p><h2 id="phases-title">Un percorso,<br /><em>passo dopo passo</em></h2><p>Ogni percorso nasce dall’ascolto e si costruisce insieme, nel rispetto dei tempi di ciascuno.</p></div><ProcessTimeline steps={phases} /></div></section>
+    <section id="percorso-terapeutico" className="paths-process" aria-labelledby="phases-title">
+      <div className="section-shell paths-process-grid">
+        <div className="paths-process-heading" data-scroll-reveal>
+          <p className="eyebrow">IL PERCORSO TERAPEUTICO</p>
+          <h2 id="phases-title">Un percorso,<br /><em>passo dopo passo</em></h2>
+          <p>Ogni percorso nasce dall’ascolto e si costruisce insieme, nel rispetto dei tempi di ciascuno.</p>
+        </div>
+        <ProcessTimeline steps={phases} icons={[Phone, MessagesSquare, Sprout, CircleCheck]} />
+      </div>
+    </section>
 
     <FirstStepCta id="percorsi-primo-passo" />
   </main>;

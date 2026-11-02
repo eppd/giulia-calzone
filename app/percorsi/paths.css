@@ -52,18 +52,24 @@
 
 /* Four connected editorial columns, with a vertical reading on smaller screens. */
 .paths-process-grid{display:block}
-.paths-process-heading{display:grid;grid-template-columns:1.1fr .9fr;column-gap:clamp(40px,6vw,88px);align-items:end;margin:0 0 56px}
+.paths-process-heading{display:block;margin:0 0 48px}
 .paths-process-heading>.eyebrow{grid-column:1/-1;margin-bottom:18px}
 .paths-process-heading>h2{margin:0}
-.paths-process-heading>p:not(.eyebrow){max-width:40ch;margin:0 0 4px;font-size:18px;line-height:1.85;color:var(--body-copy)}
+.paths-process-heading>p:not(.eyebrow){max-width:64ch;margin:20px 0 0;font-size:18px;line-height:1.85;color:var(--body-copy);text-wrap:balance}
 .paths-process .paths-timeline{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;min-width:0}
 .paths-process .paths-timeline::before{display:none}
 .paths-process .path-phase{display:flex;flex-direction:column;gap:0;padding:0;min-width:0}
 .paths-process .path-phase:not(:last-child)::after{display:block;left:54px;right:-24px;top:22.5px;bottom:auto;width:auto;height:1px;background:var(--line-strong);opacity:.8}
-.paths-process .path-phase-marker{position:relative;z-index:1;align-self:start;width:46px;height:46px;border:1px solid var(--line-strong);border-radius:50%;background:var(--sage-light);color:var(--sage-dark)}
+.paths-process .path-phase-marker{position:relative;z-index:1;align-self:start;width:46px;height:46px;border:1px solid var(--line-strong);border-radius:50%;background:var(--paper);color:var(--sage-dark)}
 .paths-process .path-phase-marker>svg{width:26px;height:26px;stroke-width:1.6}
 .paths-process .path-phase h3{font-size:26px;line-height:1.25;margin:22px 0 13px}
 .paths-process .path-phase p{max-width:none}
+
+@media(min-width:1001px){
+  .paths-process .paths-timeline{grid-template-rows:46px auto auto;row-gap:0;align-items:start}
+  .paths-process .path-phase{display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:subgrid;grid-row:span 3}
+  .paths-process .path-phase>div{display:contents}
+}
 
 @media(max-width:1000px){
   .paths-process-heading{column-gap:36px;margin-bottom:40px}
