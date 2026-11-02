@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 
 import Image from "next/image";
@@ -6,10 +7,16 @@ import { ArrowUpRight, ArrowRight, CircleCheck, Leaf, LockKeyhole, MessageCircle
 import { Reveal } from "./components/reveal";
 import { FirstStepCta } from "./components/first-step-cta";
 import { ProcessTimeline } from "./components/process-timeline";
+import { WebsiteStructuredData } from "./components/structured-data";
+import { alternatesFor } from "./seo-config";
+
+export const metadata: Metadata = {
+  alternates: alternatesFor("/"),
+};
 
 const services = [
   { id: "individuale", number: "01", tag: "INDIVIDUALE", title: "Psicoterapia individuale", text: "Un percorso per affrontare ansia, stress e difficoltà emotive, valorizzando le proprie risorse.", image: "/images/individuale-ambiente.webp", alt: "Poltrona color crema con cuscino salvia accanto a un tavolino e una finestra luminosa", detail: "Uno spazio dedicato a ciò che stai vivendo. Nel primo colloquio esploriamo le tue esigenze e valutiamo insieme obiettivi, modalità e possibilità del percorso individuale." },
-  { id: "coppia", number: "02", tag: "COPPIA", title: "Terapia di coppia", text: "Uno spazio per affrontare i conflitti, migliorare la comunicazione e comprendere le dinamiche di coppia.", image: "/images/coppia-ambiente.webp", alt: "Divano a due posti e tavolino in uno studio luminoso e accogliente", detail: "Uno spazio di ascolto della relazione, in cui dare voce ai diversi punti di vista. Il primo incontro permette di comprendere la richiesta e valutare insieme un percorso condiviso." },
+  { id: "coppia", number: "02", tag: "COPPIA", title: "Terapia di coppia", text: "Uno spazio per affrontare i conflitti, migliorare la comunicazione e comprendere le dinamiche di coppia.", image: "/images/coppia-ambiente.webp", alt: "Divano a due posti e tavolino in un ambiente luminoso e accogliente", detail: "Uno spazio di ascolto della relazione, in cui dare voce ai diversi punti di vista. Il primo incontro permette di comprendere la richiesta e valutare insieme un percorso condiviso." },
   { id: "genitorialita", number: "03", tag: "GENITORI", title: "Sostegno alla genitorialità", text: "Un supporto per comprendere i bisogni dei figli e affrontare le difficoltà educative e familiari.", image: "/images/genitorialita-ambiente.webp", alt: "Scrivania in legno con sedute vuote, un quaderno e piccoli giochi in legno", detail: "Un momento per fermarsi, condividere le difficoltà e riflettere sul proprio ruolo genitoriale. A partire dalle tue domande, definiamo insieme il tipo di sostegno più adatto." },
 ];
 const steps = [
@@ -20,14 +27,14 @@ const steps = [
 ] as const;
 
 export default function Home() {
-  return <main id="main">
+  return <main id="main"><WebsiteStructuredData />
       <section id="home" className="hero section-shell">
         <div className="hero-main"><Reveal className="hero-copy"><p className="eyebrow"><span /> PSICOLOGA E PSICOTERAPEUTA · CREMA</p><h1>Uno spazio per<br />ritrovare il tuo<br /><em>equilibrio</em></h1><p className="hero-description">Psicoterapia a Crema e online, con ascolto e percorsi personalizzati per il benessere psicologico.</p><div className="hero-actions"><a className="button primary" href="#come-funziona">Come funziona il percorso <ArrowUpRight size={17} /></a><a className="text-link" href="#approccio">Scopri il mio approccio <ArrowRight size={17} /></a></div><div className="hero-location"><span className="status-dot" /> In studio a Crema e online <span className="small-divider" /> Uno spazio, anche a distanza</div></Reveal>
         <Reveal className="hero-visual"><div className="image-frame"><Image src="/images/giulia-ritratto-home-nuovo.webp" alt="Giulia Calzone seduta in poltrona in un salotto luminoso, tra piante e una libreria" fill priority sizes="(max-width: 760px) 100vw, 48vw" className="hero-image" /><div className="image-grain" /></div><div className="vertical-caption">ASCOLTO. CURA. POSSIBILITÀ.</div></Reveal></div>
         <div className="hero-bottom"><div className="highlight" data-scroll-reveal><LockKeyhole size={34} strokeWidth={1.6} aria-hidden="true" /><div><h2>Uno spazio riservato</h2><p>Un ambiente accogliente e senza giudizio,<br className="desktop-break" /> dove sentirti libero di raccontarti.</p></div></div><div className="highlight" data-scroll-reveal><Leaf size={34} strokeWidth={1.6} aria-hidden="true" /><div><h2>Un percorso personale</h2><p>Un percorso costruito insieme, nel rispetto<br className="desktop-break" /> dei tuoi bisogni e dei tuoi tempi.</p></div></div><div className="highlight" data-scroll-reveal><MessageCircle size={34} strokeWidth={1.6} aria-hidden="true" /><div><h2>Un primo incontro</h2><p>Un momento per conoscerci e dare spazio a ciò che stai vivendo.</p></div></div></div>
       </section>
 
-      <section id="chi-sono" className="about section-shell"><Reveal className="about-image"><Image src="/images/ambiente-consulenza.webp" alt="Studio accogliente con due poltrone, una libreria e luce naturale" fill sizes="(max-width: 760px) 100vw, 42vw" /><span className="photo-caption">Uno spazio per fermarsi. E ripartire.</span></Reveal><Reveal className="about-copy"><p className="eyebrow">CHI SONO</p><h2>La persona,<br /><em>prima di tutto</em></h2><p>Sono Giulia Calzone, psicologa e psicoterapeuta a orientamento cognitivo-comportamentale a Crema.</p><p>Credo in una relazione terapeutica fondata sulla fiducia e sull'ascolto. Ogni percorso nasce dalla storia personale, dalle difficoltà e dalle risorse di ciascuno.</p><Link className="text-link underlined" href="/chi-sono/">Conosci Giulia <ArrowUpRight size={18} /></Link><div id="approccio" className="approach"><span>IL MIO APPROCCIO</span><p>Il mio approccio unisce il lavoro su pensieri, emozioni e comportamenti a una relazione terapeutica fondata sulla collaborazione.</p></div></Reveal></section>
+      <section id="chi-sono" className="about section-shell"><Reveal className="about-image"><Image src="/images/ambiente-consulenza.webp" alt="Due poltrone, una libreria e luce naturale in un ambiente accogliente" fill sizes="(max-width: 760px) 100vw, 42vw" /><span className="photo-caption">Uno spazio per fermarsi. E ripartire.</span></Reveal><Reveal className="about-copy"><p className="eyebrow">CHI SONO</p><h2>La persona,<br /><em>prima di tutto</em></h2><p>Sono Giulia Calzone, psicologa e psicoterapeuta a orientamento cognitivo-comportamentale a Crema.</p><p>Credo in una relazione terapeutica fondata sulla fiducia e sull'ascolto. Ogni percorso nasce dalla storia personale, dalle difficoltà e dalle risorse di ciascuno.</p><Link className="text-link underlined" href="/chi-sono/">Conosci Giulia <ArrowUpRight size={18} /></Link><div id="approccio" className="approach"><span>IL MIO APPROCCIO</span><p>Il mio approccio unisce il lavoro su pensieri, emozioni e comportamenti a una relazione terapeutica fondata sulla collaborazione.</p></div></Reveal></section>
 
       <section id="percorsi" className="services"><div className="section-shell"><Reveal className="section-heading"><div><p className="eyebrow">COME POSSO AIUTARTI</p><h2>Percorsi pensati <em>per te</em></h2></div><p>Tre percorsi di psicoterapia e sostegno, per esigenze diverse.</p></Reveal><div className="services-grid">{services.map(service => <Reveal className="service" key={service.number}><div className="service-image"><Image src={service.image} alt={service.alt} fill sizes="(max-width: 760px) 100vw, 33vw" /></div><p className="eyebrow service-tag">{service.tag}</p><h3>{service.title}</h3><p>{service.text}</p><Link className="service-link" href={`/percorsi/#${service.id}`} aria-label={`Scopri il percorso: ${service.title}`}>Scopri il percorso <ArrowUpRight size={18} /></Link></Reveal>)}</div></div></section>
 

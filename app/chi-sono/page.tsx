@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import { AboutContent } from "./about-content";
 import "./about.css";
+import { alternatesFor } from "../seo-config";
+import { PersonStructuredData } from "../components/structured-data";
 
 export const metadata: Metadata = {
+  alternates: alternatesFor("/chi-sono/"),
   title: "Chi sono | Giulia Calzone, Psicologa Psicoterapeuta a Crema",
   description: "Conosci Giulia Calzone e il suo approccio cognitivo-comportamentale: ascolto, risorse personali e una relazione terapeutica di fiducia. A Crema e online.",
   openGraph: {
@@ -13,5 +16,5 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
-  return <AboutContent />;
+  return <><PersonStructuredData /><AboutContent /></>;
 }

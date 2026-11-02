@@ -14,7 +14,7 @@ export function FirstStepCta({ id }: FirstStepCtaProps) {
       <div className="cta-photo">
         <Image
           src="/images/cta-ambiente.webp?v=2"
-          alt="Un angolo accogliente dello studio con poltrona, piante e luce naturale"
+          alt="Un angolo accogliente con poltrona, piante e luce naturale"
           fill
           sizes="(max-width: 760px) 100vw, 92vw"
         />

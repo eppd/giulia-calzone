@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { footerProfessionalDetails } from "../components/footer-professional-details";
+import { alternatesFor } from "../seo-config";
 import styles from "./professional-info.module.css";
 
 const registration = footerProfessionalDetails.registration;
@@ -9,6 +10,7 @@ const vatNumber = footerProfessionalDetails.vatNumber;
 const professionalProfileUrl = "https://areariservata.psy.it/albo/iscritto/giulia_calzone_186719";
 
 export const metadata: Metadata = {
+  alternates: alternatesFor("/informazioni/"),
   title: "Informazioni professionali | Giulia Calzone",
   description: "Informazioni professionali della Dott.ssa Giulia Calzone, psicologa e psicoterapeuta a Crema. Iscrizione all'Albo, Partita IVA e recapiti dello studio.",
 };

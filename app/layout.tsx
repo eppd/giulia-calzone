@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import { Geist, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { SiteShell } from "./components/site-shell";
+import { metadataBase, robotsMetadata } from "./seo-config";
 const sans = Geist({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
 const serif = Playfair_Display({ subsets: ["latin"], variable: "--font-serif", display: "swap" });
 export const metadata: Metadata = {
+  metadataBase,
   title: "Giulia Calzone | Psicologa Psicoterapeuta a Crema",
   description: "Uno spazio di ascolto e accoglienza con Giulia Calzone, psicologa e psicoterapeuta a orientamento cognitivo-comportamentale. In studio a Crema e online.",
-  robots: { index: false, follow: false },
+  robots: robotsMetadata,
   openGraph: { title: "Giulia Calzone — Uno spazio per ritrovare il tuo equilibrio", description: "Psicologia e ascolto. In studio a Crema e online.", locale: "it_IT", type: "website" }
 };
 export default function RootLayout({ children }: Readonly<{children: React.ReactNode}>) {

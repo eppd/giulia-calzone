@@ -1,2 +1,17 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+import { alternatesFor } from "../seo-config";
+
+export const metadata: Metadata = {
+  alternates: alternatesFor("/cookie/"),
+  title: "Nota sui cookie | Giulia Calzone",
+  description: "Nota informativa sui cookie, sulle funzioni del sito e sulle verifiche dell’hosting previste prima della pubblicazione.",
+  openGraph: {
+    title: "Nota sui cookie | Giulia Calzone",
+    description: "Nota informativa sui cookie, sulle funzioni del sito e sulle verifiche dell’hosting previste prima della pubblicazione.",
+    locale: "it_IT",
+    type: "website",
+  },
+};
+
 export default function Cookie() { return <main className="legal-page"><Link href="/">← Torna al sito</Link><p className="eyebrow">COOKIE</p><h1>Nota sui cookie</h1><p>Questo sito non include strumenti di analisi, pubblicità, cookie applicativi o memorizzazione locale dei dati del modulo.</p><p>Le fotografie sono servite dai file del sito. Il collegamento alle indicazioni apre un servizio esterno soltanto quando lo selezioni.</p><h2>Verifica prima della pubblicazione</h2><p>La configurazione dell’hosting e ogni eventuale integrazione futura devono essere controllate prima di redigere la cookie policy definitiva e valutare la necessità di un sistema di consenso.</p></main>; }

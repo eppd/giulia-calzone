@@ -19,7 +19,9 @@ Il progetto genera un’esportazione statica nella cartella `out/`.
 
 ## Prima di pubblicare
 
-Il modulo prepara una bozza nel browser e non invia messaggi. L’email e il numero presenti nella pagina Contatti sono stati forniti dall’utente. Le pagine privacy, cookie e informazioni professionali contengono note da completare e verificare. Il sito ha `noindex`: aggiornare i metadati dopo la verifica dei contenuti definitivi.
+Il modulo prepara una bozza nel browser e non invia messaggi. L’email e il numero presenti nella pagina Contatti sono stati forniti dall’utente. Le pagine privacy, cookie e informazioni professionali contengono note da completare e verificare.
+
+L’indicizzazione è disabilitata per impostazione predefinita: sviluppo, anteprime e build senza configurazione producono `noindex, nofollow`. Per una build di produzione pubblica, impostare `SITE_URL` all’origine HTTPS verificata del dominio definitivo e `SITE_INDEXING_ENABLED=true` soltanto quando sito, contatti e informative sono pronti. Se disponibile, `VERCEL_ENV` diverso da `production` e `SITE_DEPLOYMENT_ENV` diverso da `production` mantengono il blocco. Canonical assoluti e il markup `WebSite` vengono generati soltanto quando `SITE_URL` è valido; senza dominio non vengono creati canonical locali o fittizi. Queste variabili sono lette al momento della build statica e devono quindi essere presenti nell’ambiente di build di produzione.
 
 La homepage usa il ritratto fornito dall’utente in `public/images/giulia-ritratto-home.webp`; la professionista dovrà verificare che la persona raffigurata corrisponda alla fotografia approvata per la pubblicazione. La hero di `/chi-sono/` usa il ritratto fornito dall’utente in `public/images/giulia-calzone-chi-sono.webp`. Lo studio, i tre ambienti dei servizi e la foto della CTA sono immagini illustrative generate con IA: non raffigurano lo studio effettivo o clienti reali. La precedente variante verticale generata rimane disponibile come asset alternativo. Le immagini attive sono servite localmente da `public/images/` in formato WebP. Le precedenti foto d’atmosfera di Unsplash sono conservate come alternative e i relativi URL si trovano in `scripts/download-assets.mjs`. I font Geist e Playfair Display sono gestiti e serviti localmente da `next/font`.
 
@@ -35,7 +37,7 @@ La route `/chi-sono/` riutilizza header, footer e Reveal condivisi con la homepa
 
 La hero di `/chi-sono/` usa il ritratto fornito dall’utente in `public/images/giulia-calzone-chi-sono.webp`. Il riquadro mantiene le stesse dimensioni delle hero di Percorsi e Contatti: altezza 340 px, 310 px sotto i 1000 px e 250 px sotto i 760 px. `object-position: 64% 40%` mantiene il volto in evidenza; la foto è convertita in WebP senza filtri. La foto della homepage resta distinta. Le foto degli ambienti riutilizzano gli asset illustrativi esistenti.
 
-`/percorsi/` contiene ora la pagina dedicata ai servizi. Le CTA di contatto portano al modulo esistente `/#contatti`. I metadati locali mantengono il noindex del progetto finché non sono pronti contenuti, contatti e informative definitive.
+`/percorsi/` contiene ora la pagina dedicata ai servizi. Le CTA di contatto portano al modulo esistente `/#contatti`. L’indicizzazione segue la configurazione centralizzata in `app/seo-config.ts` e resta disattivata finché non vengono impostate le variabili di produzione documentate sopra.
 
 ## Percorsi e servizi
 
