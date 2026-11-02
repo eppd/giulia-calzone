@@ -48,3 +48,11 @@
 .about-page .pause{margin-top:80px}
 .bio-practice-divider{grid-column:1/-1;border-top:1px solid var(--line);padding-top:14px}
 @media(max-width:760px){.about-page .pause{margin-top:56px}}
+
+/* Tablet: one pillar per row, with room for its heading and description. */
+@media (min-width: 761px) and (max-width: 1000px) {
+  .bio-pillars-grid { grid-template-columns: minmax(0, 1fr); gap: 0; border-top: 0; }
+  .bio-pillar { display: grid; grid-template-columns: minmax(0, .75fr) minmax(0, 1.25fr); gap: 32px; align-items: start; border-top: 1px solid var(--line); padding: 24px 0; }
+  .bio-pillar h3 { max-width: none; }
+  .bio-pillar p { margin: 0; }
+}

@@ -142,3 +142,12 @@ h1 em,h2 em{color:var(--sage-soft)}
 /* Larger icons within the original open layout below the homepage hero. */
 #home .hero-bottom .highlight>svg{width:28px;height:28px;flex:0 0 auto}
 @media(max-width:760px){#home .hero-bottom .highlight>svg{width:26px;height:26px}}
+
+/* Tablet: keep each service together without squeezing three text columns. */
+@media (min-width: 761px) and (max-width: 1000px) {
+  #percorsi .services-grid { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+  #percorsi .service { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); column-gap: 32px; align-items: start; }
+  #percorsi .service-image { grid-column: 1; grid-row: 1 / span 4; height: 100%; min-height: 242px; }
+  #percorsi .service-tag { margin-top: 0; }
+  #percorsi .service > p:not(.eyebrow) { min-height: 0; }
+}
